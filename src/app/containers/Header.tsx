@@ -65,6 +65,14 @@ class Header extends React.Component<IStateToProps> {
               {translations.stars}
             </ConnectedLink>
           </li>
+
+
+          <li>
+            <ConnectedLink activeClassName={classNames.activeLink} routeName={routes.gamePage.name}>
+              Play factorini
+            </ConnectedLink>
+          </li>
+
         </ul>
       </nav>
     );

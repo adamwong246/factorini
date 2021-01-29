@@ -9,7 +9,8 @@ interface IRoute {
 type RoutablePages = "homePage"
 | "aboutPage"
 | "counterPage"
-| "starsPage";
+| "starsPage"
+| "gamePage";
 
 type RouteConfig = Record<RoutablePages, Omit<IRoute, "name">>;
 export type RoutePageMap = Record<RoutablePages, ConnectedComponent<any, any>>;
@@ -19,7 +20,8 @@ const config: RouteConfig = {
   aboutPage: {path: "/about"},
   counterPage: {path: "/counter"},
   homePage: {path: "/"},
-  starsPage: {path: "/stars"}
+  starsPage: {path: "/stars"},
+  gamePage: {path: "/game"}
 };
 
 export function getRoutes(baseUrl: string = ""): Record<RoutablePages, IRoute> {
@@ -41,5 +43,6 @@ export const navigate: RouteNavigate = {
   aboutPage: () => getNavigateAction(routes.aboutPage.name),
   counterPage: () => getNavigateAction(routes.counterPage.name),
   homePage: () => getNavigateAction(routes.homePage.name),
-  starsPage: () => getNavigateAction(routes.starsPage.name)
+  starsPage: () => getNavigateAction(routes.starsPage.name),
+  gamePage: () => getNavigateAction(routes.gamePage.name)
 };

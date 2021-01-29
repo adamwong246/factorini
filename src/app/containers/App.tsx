@@ -13,6 +13,7 @@ import {AboutPage} from "../pages/AboutPage";
 import {CounterPage} from "../pages/CounterPage";
 import {HomePage} from "../pages/HomePage";
 import {StarsPage} from "../pages/StarsPage";
+import {GamePage} from "../pages/GamePage";
 import {IStore} from "../redux/IStore";
 import {RoutePageMap} from "../routes/routes";
 import {translationsSelector} from "../selectors/translationsSelector";
@@ -40,7 +41,8 @@ class App extends React.Component<IStateToProps> {
     aboutPage: AboutPage,
     counterPage: CounterPage,
     homePage: HomePage,
-    starsPage: StarsPage
+    starsPage: StarsPage,
+    gamePage: GamePage
   };
   public render(): JSX.Element {
     const {route, translations: {notFound}} = this.props;
